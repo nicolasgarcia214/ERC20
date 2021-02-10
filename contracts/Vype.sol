@@ -20,3 +20,14 @@ contract Vype is ERC20{
         emit TokensMinted(_to, _amount);
     }
 }
+
+contract Tvype is ERC20{
+    event TokensMinted(address, uint);
+
+    constructor() ERC20("Vype Test", "TVYPE"){}
+
+    function faucet(address _to, uint _amount) external {
+        _mint(_to, _amount);
+        emit TokensMinted(_to, _amount);
+    }
+}
